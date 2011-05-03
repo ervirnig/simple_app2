@@ -3,7 +3,7 @@ SimpleApp2::Application.routes.draw do
   resources :sessions, :only => [:new, :create, :destroy]
 
   get "sessions/new"
-  resources :users
+
 
   match '/signup',  :to => 'users#new'
   match '/signin',  :to => 'sessions#new'
